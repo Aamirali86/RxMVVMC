@@ -1,0 +1,72 @@
+PODS:
+  - Action (4.1.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - Differentiator (4.0.1)
+  - Network (0.1.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - Network/Tests (0.1.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+    - RxTest
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxTest (5.1.1):
+    - RxSwift (~> 5)
+  - SwissKnife (0.1.11):
+    - RxCocoa (~> 5.1.1)
+    - RxSwift (~> 5.1.1)
+  - UIToolKit (2.7.6)
+
+DEPENDENCIES:
+  - Action (~> 4.1.0)
+  - Network (from `Network`)
+  - Network/Tests (from `Network`)
+  - RxCocoa (~> 5.1.1)
+  - RxDataSources
+  - RxSwift (~> 5.1.1)
+  - SwissKnife (from `SwissKnife`)
+  - UIToolKit (from `UIToolKit`)
+
+SPEC REPOS:
+  trunk:
+    - Action
+    - Differentiator
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - RxTest
+
+EXTERNAL SOURCES:
+  Network:
+    :path: Network
+  SwissKnife:
+    :path: SwissKnife
+  UIToolKit:
+    :path: UIToolKit
+
+SPEC CHECKSUMS:
+  Action: 79e6c5dc91e13eea045ab6744b3e5609086671aa
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Network: 113d304a9fb9e5990837824725509e58a1d46d85
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
+  SwissKnife: 9401c9af2bf6fb95b2db504f2287f7ddc7d3bbdd
+  UIToolKit: e32a074fc435228cbcd2ed2e0ec4feed52e2a393
+
+PODFILE CHECKSUM: 0e46109f1fd47136f3794628ab0866c936e49761
+
+COCOAPODS: 1.9.3

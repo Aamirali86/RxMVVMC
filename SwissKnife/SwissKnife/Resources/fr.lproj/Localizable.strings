@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  SwissKnife
+*/
+
+/*** Transifex resources - START ***/
+"swiss_min" = "MIN";
+"swiss_min_plural" = "mins";
+"swiss_sec" = "sec";
+"swiss_sec_plural" = "secs";
+"swiss_today" = "Aujourd\’hui";
+"swiss_tomorrow" = "Demain";
+/*** Transifex resources - END ***/

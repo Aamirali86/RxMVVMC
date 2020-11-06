@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  SwissKnife
+*/
+
+/*** Transifex resources - START ***/
+"swiss_min" = "خولەک";
+"swiss_min_plural" = "خولەک";
+"swiss_sec" = "چركە";
+"swiss_sec_plural" = "چركە";
+"swiss_today" = "ئەمڕۆ";
+"swiss_tomorrow" = "سبەی";
+/*** Transifex resources - END ***/

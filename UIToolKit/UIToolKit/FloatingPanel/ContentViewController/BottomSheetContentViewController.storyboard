@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bottom Sheet Content View Controller-->
+        <scene sceneID="Rf2-T2-8E3">
+            <objects>
+                <viewController storyboardIdentifier="BottomSheetContentViewController" id="b8A-Lg-pV4" customClass="BottomSheetContentViewController" customModule="UIToolKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dtQ-PT-etl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66u-Jq-ggh">
+                                <rect key="frame" x="0.0" y="60" width="414" height="836"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="35z-j3-2Rv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ciH-UQ-Qev">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="256" placeholder="YES" id="jTA-Te-Vij"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="35z-j3-2Rv" secondAttribute="trailing" id="70h-ij-c4X"/>
+                                    <constraint firstItem="35z-j3-2Rv" firstAttribute="top" secondItem="66u-Jq-ggh" secondAttribute="top" id="7rz-kg-zYb"/>
+                                    <constraint firstAttribute="bottom" secondItem="35z-j3-2Rv" secondAttribute="bottom" id="CW5-mB-Gng"/>
+                                    <constraint firstItem="35z-j3-2Rv" firstAttribute="width" secondItem="66u-Jq-ggh" secondAttribute="width" id="gUg-BU-Iv3"/>
+                                    <constraint firstItem="35z-j3-2Rv" firstAttribute="leading" secondItem="66u-Jq-ggh" secondAttribute="leading" id="kVM-Ax-c2I"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="66u-Jq-ggh" firstAttribute="trailing" secondItem="rhh-Ai-VxU" secondAttribute="trailing" id="Cpb-yk-Fbp"/>
+                            <constraint firstItem="66u-Jq-ggh" firstAttribute="bottom" secondItem="dtQ-PT-etl" secondAttribute="bottom" id="QBz-de-9hB"/>
+                            <constraint firstItem="66u-Jq-ggh" firstAttribute="top" secondItem="rhh-Ai-VxU" secondAttribute="top" constant="16" id="aoS-PE-TR1"/>
+                            <constraint firstItem="66u-Jq-ggh" firstAttribute="leading" secondItem="rhh-Ai-VxU" secondAttribute="leading" id="gjW-7C-7pU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rhh-Ai-VxU"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="66u-Jq-ggh" id="hjZ-1g-fbD"/>
+                        <outlet property="stackView" destination="ciH-UQ-Qev" id="vNy-1c-nSK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y0f-Tx-pat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
