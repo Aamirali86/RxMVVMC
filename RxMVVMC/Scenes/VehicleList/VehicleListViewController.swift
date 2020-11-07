@@ -34,16 +34,6 @@ class VehicleListViewController: UIViewController {
         bindViewModel()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        navigationController?.navigationBar.isHidden = false
-    }
-    
     private func setupUI() {
         tableView.registerCell(VehicleCell.self)
     }

@@ -16,10 +16,12 @@ protocol VehicleListViewModelType {
 }
 
 class VehicleListViewModel: VehicleListViewModelType {
+    //MARK:- Private
     private let fetchVehicleAction: Action<(Coordinates, Coordinates), [Vehicle]>
     private let _vehicles = ReplaySubject<[Vehicle]>.create(bufferSize: 1)
     private let bag = DisposeBag()
     
+    //MARK:- Init
     init(vehicleService: VehicleAPI) {
         fetchVehicleAction = Action { (point1, point2) in
             vehicleService.requestVehicles(with: point1, and: point2)
@@ -36,6 +38,7 @@ class VehicleListViewModel: VehicleListViewModelType {
         )
     }
     
+    /// fetch vehciles and convert it to used for RxDataSource
     var vehicles: Driver<[VehicleTableViewSection]> {
         _vehicles
             .map {
