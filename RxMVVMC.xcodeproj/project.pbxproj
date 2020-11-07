@@ -33,6 +33,7 @@
 		2968147F2556D02400146EDB /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2968147E2556D02400146EDB /* VehicleCell.swift */; };
 		296814812556D13E00146EDB /* VehicleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814802556D13D00146EDB /* VehicleCellViewModel.swift */; };
 		296814832556D94A00146EDB /* VehicleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296814822556D94A00146EDB /* VehicleCell.xib */; };
+		296814872556E8C300146EDB /* VehicleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814862556E8C300146EDB /* VehicleListViewModel.swift */; };
 		C9EA3AA1D2FF138A2EA3E31C /* Pods_RxMVVMC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BAE8C3087718775A835C72 /* Pods_RxMVVMC.framework */; };
 		F88B9398D209A4A78FDE57F3 /* Pods_RxMVVMCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59694B58B7F2D392DC43915A /* Pods_RxMVVMCTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		2968147E2556D02400146EDB /* VehicleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
 		296814802556D13D00146EDB /* VehicleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCellViewModel.swift; sourceTree = "<group>"; };
 		296814822556D94A00146EDB /* VehicleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleCell.xib; sourceTree = "<group>"; };
+		296814862556E8C300146EDB /* VehicleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewModel.swift; sourceTree = "<group>"; };
 		393FB48613026385DC9CC874 /* Pods-RxMVVMCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMCTests.release.xcconfig"; path = "Target Support Files/Pods-RxMVVMCTests/Pods-RxMVVMCTests.release.xcconfig"; sourceTree = "<group>"; };
 		5304BA14ABF924FAB7EEB4A8 /* Pods-RxMVVMCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMCTests.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVMCTests/Pods-RxMVVMCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		59694B58B7F2D392DC43915A /* Pods_RxMVVMCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVMCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,8 @@
 		296814392555286F00146EDB /* RxMVVMCTests */ = {
 			isa = PBXGroup;
 			children = (
+				296814852556E8A700146EDB /* VehicleMap */,
+				296814842556E89B00146EDB /* VehicleList */,
 				2968143A2555286F00146EDB /* RxMVVMCTests.swift */,
 				2968143C2555286F00146EDB /* Info.plist */,
 			);
@@ -256,6 +260,21 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		296814842556E89B00146EDB /* VehicleList */ = {
+			isa = PBXGroup;
+			children = (
+				296814862556E8C300146EDB /* VehicleListViewModel.swift */,
+			);
+			path = VehicleList;
+			sourceTree = "<group>";
+		};
+		296814852556E8A700146EDB /* VehicleMap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VehicleMap;
+			sourceTree = "<group>";
+		};
 		6AE16914DDAC94DD9B771DF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +325,7 @@
 				296814322555286F00146EDB /* Sources */,
 				296814332555286F00146EDB /* Frameworks */,
 				296814342555286F00146EDB /* Resources */,
+				D64BBEAAC2519A6C1EA30B23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -417,6 +437,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D64BBEAAC2519A6C1EA30B23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxMVVMCTests/Pods-RxMVVMCTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxMVVMCTests/Pods-RxMVVMCTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxMVVMCTests/Pods-RxMVVMCTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D8B959C64793AD4FEB8F1D03 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2968143B2555286F00146EDB /* RxMVVMCTests.swift in Sources */,
+				296814872556E8C300146EDB /* VehicleListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

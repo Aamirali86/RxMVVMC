@@ -32,7 +32,6 @@ class VehicleListViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         bindViewModel()
-        fetchVehicles()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,10 +53,6 @@ class VehicleListViewController: UIViewController {
             .vehicles
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: bag)
-    }
-    
-    private func fetchVehicles() {
-        viewModel.fetchVehicles()
     }
     
     private lazy var dataSource: RxTableViewSectionedReloadDataSource<VehicleTableViewSection> = {

@@ -24,6 +24,7 @@ target 'RxMVVMC' do
   target 'RxMVVMCTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxTest'
   end
 
 end

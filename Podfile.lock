@@ -34,6 +34,7 @@ DEPENDENCIES:
   - RxCocoa (~> 5.1.1)
   - RxDataSources
   - RxSwift (~> 5.1.1)
+  - RxTest
   - SwissKnife (from `SwissKnife`)
   - UIToolKit (from `UIToolKit`)
 
@@ -67,6 +68,6 @@ SPEC CHECKSUMS:
   SwissKnife: 9401c9af2bf6fb95b2db504f2287f7ddc7d3bbdd
   UIToolKit: e32a074fc435228cbcd2ed2e0ec4feed52e2a393
 
-PODFILE CHECKSUM: 0e46109f1fd47136f3794628ab0866c936e49761
+PODFILE CHECKSUM: 240bab92540a21d2b7d60aac3615cc7819e0014f
 
 COCOAPODS: 1.9.3

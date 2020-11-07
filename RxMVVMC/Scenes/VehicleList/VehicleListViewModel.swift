@@ -13,7 +13,6 @@ import Action
 
 protocol VehicleListViewModelType {
     var vehicles: Driver<[VehicleTableViewSection]> { get }
-    func fetchVehicles()
 }
 
 class VehicleListViewModel: VehicleListViewModelType {
@@ -31,10 +30,10 @@ class VehicleListViewModel: VehicleListViewModelType {
             .bind(to: _vehicles)
             .disposed(by: bag)
         
-        fetchVehicleAction.errors.subscribe(onNext: { error in
-            print(error)
-        })
-        .disposed(by: bag)
+        fetchVehicleAction.execute(
+            (Coordinates(latitude: 53.694865, longitude: 9.757589)
+            , Coordinates(latitude: 53.394655, longitude: 10.099891))
+        )
     }
     
     var vehicles: Driver<[VehicleTableViewSection]> {
@@ -46,12 +45,5 @@ class VehicleListViewModel: VehicleListViewModelType {
                 return [VehicleTableViewSection(items: rows)]
             }
             .asDriver(onErrorJustReturn: [])
-    }
-    
-    func fetchVehicles() {
-        fetchVehicleAction.execute(
-            (Coordinates(latitude: 53.694865, longitude: 9.757589)
-            , Coordinates(latitude: 53.394655, longitude: 10.099891))
-        )
     }
 }
