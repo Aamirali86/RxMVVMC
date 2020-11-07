@@ -25,6 +25,14 @@
 		2968146A2556B77900146EDB /* VehicleMapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814692556B77900146EDB /* VehicleMapBuilder.swift */; };
 		2968146C2556BA3800146EDB /* VehicleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2968146B2556BA3800146EDB /* VehicleTabBarController.swift */; };
 		2968146E2556BF5C00146EDB /* VehicleTabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2968146D2556BF5C00146EDB /* VehicleTabbarCoordinator.swift */; };
+		296814742556C52E00146EDB /* ConsumerEdgeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814732556C52E00146EDB /* ConsumerEdgeGateway.swift */; };
+		296814762556C5AE00146EDB /* NetworkService+Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814752556C5AE00146EDB /* NetworkService+Vehicles.swift */; };
+		296814782556C5E700146EDB /* VehicleResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814772556C5E700146EDB /* VehicleResource.swift */; };
+		2968147A2556C66B00146EDB /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814792556C66B00146EDB /* Vehicle.swift */; };
+		2968147C2556CE0A00146EDB /* VehicleTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2968147B2556CE0A00146EDB /* VehicleTableViewSection.swift */; };
+		2968147F2556D02400146EDB /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2968147E2556D02400146EDB /* VehicleCell.swift */; };
+		296814812556D13E00146EDB /* VehicleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814802556D13D00146EDB /* VehicleCellViewModel.swift */; };
+		296814832556D94A00146EDB /* VehicleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296814822556D94A00146EDB /* VehicleCell.xib */; };
 		C9EA3AA1D2FF138A2EA3E31C /* Pods_RxMVVMC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BAE8C3087718775A835C72 /* Pods_RxMVVMC.framework */; };
 		F88B9398D209A4A78FDE57F3 /* Pods_RxMVVMCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59694B58B7F2D392DC43915A /* Pods_RxMVVMCTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +71,14 @@
 		296814692556B77900146EDB /* VehicleMapBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleMapBuilder.swift; sourceTree = "<group>"; };
 		2968146B2556BA3800146EDB /* VehicleTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTabBarController.swift; sourceTree = "<group>"; };
 		2968146D2556BF5C00146EDB /* VehicleTabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTabbarCoordinator.swift; sourceTree = "<group>"; };
+		296814732556C52E00146EDB /* ConsumerEdgeGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerEdgeGateway.swift; sourceTree = "<group>"; };
+		296814752556C5AE00146EDB /* NetworkService+Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Vehicles.swift"; sourceTree = "<group>"; };
+		296814772556C5E700146EDB /* VehicleResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleResource.swift; sourceTree = "<group>"; };
+		296814792556C66B00146EDB /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		2968147B2556CE0A00146EDB /* VehicleTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VehicleTableViewSection.swift; path = ../../../../../../../../VehicleTableViewSection.swift; sourceTree = "<group>"; };
+		2968147E2556D02400146EDB /* VehicleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
+		296814802556D13D00146EDB /* VehicleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCellViewModel.swift; sourceTree = "<group>"; };
+		296814822556D94A00146EDB /* VehicleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleCell.xib; sourceTree = "<group>"; };
 		393FB48613026385DC9CC874 /* Pods-RxMVVMCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMCTests.release.xcconfig"; path = "Target Support Files/Pods-RxMVVMCTests/Pods-RxMVVMCTests.release.xcconfig"; sourceTree = "<group>"; };
 		5304BA14ABF924FAB7EEB4A8 /* Pods-RxMVVMCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMCTests.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVMCTests/Pods-RxMVVMCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		59694B58B7F2D392DC43915A /* Pods_RxMVVMCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVMCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +192,9 @@
 		2968144B2556A30000146EDB /* ConsumerNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				296814722556C51600146EDB /* Gateway */,
+				296814752556C5AE00146EDB /* NetworkService+Vehicles.swift */,
+				296814772556C5E700146EDB /* VehicleResource.swift */,
 			);
 			path = ConsumerNetwork;
 			sourceTree = "<group>";
@@ -183,6 +202,7 @@
 		2968144C2556A30A00146EDB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2968147B2556CE0A00146EDB /* VehicleTableViewSection.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,6 +210,7 @@
 		2968144D2556A31000146EDB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				296814792556C66B00146EDB /* Vehicle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +218,7 @@
 		296814542556A4AD00146EDB /* VehicleList */ = {
 			isa = PBXGroup;
 			children = (
+				2968147D2556D01700146EDB /* Cell */,
 				296814572556A50300146EDB /* VehicleListViewController.swift */,
 				296814592556A55800146EDB /* VehicleListViewModel.swift */,
 				296814612556A64B00146EDB /* VehicleList.storyboard */,
@@ -214,6 +236,24 @@
 				296814692556B77900146EDB /* VehicleMapBuilder.swift */,
 			);
 			path = VehicleMap;
+			sourceTree = "<group>";
+		};
+		296814722556C51600146EDB /* Gateway */ = {
+			isa = PBXGroup;
+			children = (
+				296814732556C52E00146EDB /* ConsumerEdgeGateway.swift */,
+			);
+			path = Gateway;
+			sourceTree = "<group>";
+		};
+		2968147D2556D01700146EDB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2968147E2556D02400146EDB /* VehicleCell.swift */,
+				296814802556D13D00146EDB /* VehicleCellViewModel.swift */,
+				296814822556D94A00146EDB /* VehicleCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		6AE16914DDAC94DD9B771DF0 /* Frameworks */ = {
@@ -321,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				296814302555286E00146EDB /* LaunchScreen.storyboard in Resources */,
+				296814832556D94A00146EDB /* VehicleCell.xib in Resources */,
 				296814622556A64B00146EDB /* VehicleList.storyboard in Resources */,
 				2968142D2555286E00146EDB /* Assets.xcassets in Resources */,
 				296814602556A62F00146EDB /* VehicleMap.storyboard in Resources */,
@@ -405,11 +446,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2968147F2556D02400146EDB /* VehicleCell.swift in Sources */,
+				2968147A2556C66B00146EDB /* Vehicle.swift in Sources */,
+				296814762556C5AE00146EDB /* NetworkService+Vehicles.swift in Sources */,
 				296814472556A1EC00146EDB /* AppCoordinator.swift in Sources */,
 				296814242555286D00146EDB /* AppDelegate.swift in Sources */,
 				296814512556A3D200146EDB /* Coordinator.swift in Sources */,
 				296814582556A50300146EDB /* VehicleListViewController.swift in Sources */,
 				2968146A2556B77900146EDB /* VehicleMapBuilder.swift in Sources */,
+				296814742556C52E00146EDB /* ConsumerEdgeGateway.swift in Sources */,
+				296814812556D13E00146EDB /* VehicleCellViewModel.swift in Sources */,
+				296814782556C5E700146EDB /* VehicleResource.swift in Sources */,
+				2968147C2556CE0A00146EDB /* VehicleTableViewSection.swift in Sources */,
 				2968145A2556A55800146EDB /* VehicleListViewModel.swift in Sources */,
 				296814682556AC1000146EDB /* VehicleListBuilder.swift in Sources */,
 				296814262555286D00146EDB /* SceneDelegate.swift in Sources */,

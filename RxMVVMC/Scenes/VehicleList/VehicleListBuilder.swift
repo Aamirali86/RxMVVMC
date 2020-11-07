@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Network
 
 class VehicleListBuilder {
     func build() -> UIViewController {
         let storyboard = UIStoryboard(name: "VehicleList", bundle: Bundle.main)
-        let viewModel = VehicleListViewModel()
+        
+        let vehicleAPI = NetworkService(network: URLSession.shared,
+                                         vendorId: "",
+                                         appVersion: "")
+        
+        let viewModel = VehicleListViewModel(vehicleService: vehicleAPI)
         let controller = storyboard.instantiateInitialViewController {
             VehicleListViewController(coder: $0, viewModel: viewModel)
         }
