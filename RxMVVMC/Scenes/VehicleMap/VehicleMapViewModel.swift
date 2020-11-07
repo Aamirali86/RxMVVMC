@@ -10,6 +10,6 @@ import Foundation
 
 protocol VehicleMapViewModelType {}
 
-class VehicleMapViewModel: VehicleListViewModelType {
+class VehicleMapViewModel: VehicleMapViewModelType {
     
 }

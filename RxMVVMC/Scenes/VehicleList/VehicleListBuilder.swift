@@ -17,7 +17,7 @@ class VehicleListBuilder {
         }
         
         guard let vehicleViewController = controller else {
-            fatalError("Failed to load ProductViewController from storyboard.")
+            fatalError("Failed to load VehicleListViewController from storyboard.")
         }
 
         return vehicleViewController

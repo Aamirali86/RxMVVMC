@@ -18,7 +18,7 @@ final class AppCoordinator: BaseCoordinator<UINavigationController> {
     }
     
     override func start() {
-        let coordinator = VehicleListCoordinator(rootViewController: rootViewController)
+        let coordinator = VehicleTabbarCoordinator(rootViewController: rootViewController)
         startChild(coordinator)
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()

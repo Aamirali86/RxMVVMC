@@ -11,7 +11,7 @@ import UIKit
 /// The `BaseCoordinator` is provides basic/abstract implementation of navigations.
 /// it is responsible to manage the presentation logic of view controllers.
 /// subclass can override `start` implementation for their specific presentation logic.
-class BaseCoordinator<T: UIViewController>: NSObject, Coordinator {
+class BaseCoordinator<T: UIViewController>: Coordinator {
     let rootViewController: T
     var child: Coordinator?
     weak var parent: Coordinator?

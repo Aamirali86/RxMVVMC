@@ -13,7 +13,6 @@ class VehicleListViewController: UIViewController {
     var viewModel: VehicleListViewModelType
     
     // MARK:- Init
-    
     init?(coder: NSCoder, viewModel: VehicleListViewModelType) {
         self.viewModel = viewModel
         super.init(coder: coder)
