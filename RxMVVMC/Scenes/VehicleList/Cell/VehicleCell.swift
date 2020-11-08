@@ -6,7 +6,7 @@
 //  Copyright © 2020 FreeNow. All rights reserved.
 //
 
-import UIToolKit
+import UIKit
 import SwissKnife
 
 class VehicleCell: UITableViewCell {
@@ -19,9 +19,9 @@ class VehicleCell: UITableViewCell {
     }
     
     func populate(with viewModel: VehicleCellViewModelType) {
-        state.stylizedText = StylizedText(text: viewModel.state.rawValue, textStyle: TextStyle.medium)
-        type.stylizedText = StylizedText(text: viewModel.type.rawValue, textStyle: TextStyle.medium)
-        heading.stylizedText = StylizedText(text: viewModel.heading, textStyle: TextStyle.small)
+        state.text = viewModel.state.rawValue
+        type.text = viewModel.type.rawValue
+        heading.text = viewModel.heading
     }
 }
 

@@ -21,6 +21,7 @@ class VehicleListViewModelTest: XCTestCase {
     override func setUp() {
         scheduler = TestScheduler(initialClock: 0)
         vehicleService = MockVehicleAPI(scheduler: scheduler)
+        viewModel = VehicleListViewModel(vehicleService: vehicleService)
     }
     
     func testVehicles() {
@@ -28,15 +29,13 @@ class VehicleListViewModelTest: XCTestCase {
             .next(10, [Vehicle(id: 1238, coordinate: Coordinates(latitude: 24.28, longitude: 54.23), state: "ACTIVE", type: "TAXI", heading: 0.0)]),
             .completed(20)
         ]
-
-        viewModel = VehicleListViewModel(vehicleService: vehicleService)
         
         SharingScheduler.mock(scheduler: scheduler) {
             let result = scheduler.start { [unowned self] in
                 self.viewModel.vehicles.asObservable()
             }
             
-            let sections = result.events[0].value.element!
+            guard let sections = result.events.first?.value.element else { return }
             
             XCTAssertEqual(sections.count, 1)
             

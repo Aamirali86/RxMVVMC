@@ -39,6 +39,7 @@ class VehicleListViewController: UIViewController {
     }
     
     private func bindViewModel() {
+        viewModel.fetchVehicles()
         viewModel
             .vehicles
             .drive(tableView.rx.items(dataSource: dataSource))
