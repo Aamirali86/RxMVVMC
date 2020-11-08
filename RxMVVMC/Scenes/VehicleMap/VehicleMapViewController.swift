@@ -11,7 +11,9 @@ import UIKit
 import MapKit
 import SwissKnife
 
-class VehicleMapViewController: UIViewController {
+final class VehicleMapViewController: BaseViewController {
+    //MARK:- Private
+    
     private var disposeBag = DisposeBag()
     private var viewModel: VehicleMapViewModelType
     @IBOutlet weak private var mapView: MKMapView! {
@@ -21,6 +23,7 @@ class VehicleMapViewController: UIViewController {
     }
     
     // MARK:- Init
+    
     init?(coder: NSCoder, viewModel: VehicleMapViewModelType) {
         self.viewModel = viewModel
         super.init(coder: coder)
@@ -30,13 +33,14 @@ class VehicleMapViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK:- Override
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
     }
 }
 
-//MARK:- Private
 extension VehicleMapViewController {
     private func setupMapView() {
         mapView.delegate = self

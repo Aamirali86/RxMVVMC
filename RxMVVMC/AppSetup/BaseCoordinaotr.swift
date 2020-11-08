@@ -16,6 +16,8 @@ class BaseCoordinator<T: UIViewController>: Coordinator {
     var child: Coordinator?
     weak var parent: Coordinator?
     
+    //MARK:- Init
+    
     init(rootViewController: T) {
         self.rootViewController = rootViewController
     }

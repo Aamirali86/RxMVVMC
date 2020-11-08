@@ -9,15 +9,13 @@
 import UIKit
 import SwissKnife
 
-class VehicleCell: UITableViewCell {
+final class VehicleCell: UITableViewCell {
+    //MARK:- Private
+    
     @IBOutlet private var state: UILabel!
     @IBOutlet private var type: UILabel!
     @IBOutlet private var heading: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     func populate(with viewModel: VehicleCellViewModelType) {
         state.text = viewModel.state.rawValue
         type.text = viewModel.type.rawValue

@@ -9,16 +9,22 @@
 import Foundation
 import Network
 
-class VehicleResource: ConsumerEdgeGateway {
+final class VehicleResource: ConsumerEdgeGateway {
+    //MARK:- Private
+    
     private let token: String
     private let point1: Coordinates
     private let point2: Coordinates
+    
+    //MARK:- Init
     
     init(token: String, point1: Coordinates, point2: Coordinates) {
         self.token = token
         self.point1 = point1
         self.point2 = point2
     }
+    
+    //MARK:- Internal
     
     let method: HTTPMethod = .get
     var path: String {

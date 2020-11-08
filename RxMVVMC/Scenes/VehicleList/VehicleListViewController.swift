@@ -11,28 +11,11 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-class VehicleListViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+final class VehicleListViewController: BaseViewController {
+    //MARK:- Private
     
+    @IBOutlet private weak var tableView: UITableView!
     private let bag = DisposeBag()
-    var viewModel: VehicleListViewModelType
-    
-    // MARK:- Init
-    init?(coder: NSCoder, viewModel: VehicleListViewModelType) {
-        self.viewModel = viewModel
-        super.init(coder: coder)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-        bindViewModel()
-    }
     
     private func setupUI() {
         tableView.registerCell(VehicleCell.self)
@@ -59,4 +42,25 @@ class VehicleListViewController: UIViewController {
             }
         })
     }()
+
+    var viewModel: VehicleListViewModelType
+    
+    // MARK:- Init
+    init?(coder: NSCoder, viewModel: VehicleListViewModelType) {
+        self.viewModel = viewModel
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK:- Override
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        bindViewModel()
+    }
+    
 }

@@ -9,12 +9,15 @@
 import Foundation
 import Differentiator
 
+/// To use for RxDataSource
 struct VehicleTableViewSection {
     var items: [Item]
 }
 
 extension VehicleTableViewSection: SectionModelType {
     typealias Item = VehicleSectionRow
+    
+    //MARK:- Init
     
     init(original: VehicleTableViewSection, items: [Item]) {
         self = original

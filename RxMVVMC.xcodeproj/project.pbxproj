@@ -23,8 +23,8 @@
 		296814622556A64B00146EDB /* VehicleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296814612556A64B00146EDB /* VehicleList.storyboard */; };
 		296814682556AC1000146EDB /* VehicleListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814672556AC1000146EDB /* VehicleListBuilder.swift */; };
 		2968146A2556B77900146EDB /* VehicleMapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814692556B77900146EDB /* VehicleMapBuilder.swift */; };
-		2968146C2556BA3800146EDB /* VehicleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2968146B2556BA3800146EDB /* VehicleTabBarController.swift */; };
-		2968146E2556BF5C00146EDB /* VehicleTabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2968146D2556BF5C00146EDB /* VehicleTabbarCoordinator.swift */; };
+		2968146C2556BA3800146EDB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2968146B2556BA3800146EDB /* BaseViewController.swift */; };
+		2968146E2556BF5C00146EDB /* VehicleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2968146D2556BF5C00146EDB /* VehicleCoordinator.swift */; };
 		296814742556C52E00146EDB /* ConsumerEdgeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814732556C52E00146EDB /* ConsumerEdgeGateway.swift */; };
 		296814762556C5AE00146EDB /* NetworkService+Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814752556C5AE00146EDB /* NetworkService+Vehicles.swift */; };
 		296814782556C5E700146EDB /* VehicleResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296814772556C5E700146EDB /* VehicleResource.swift */; };
@@ -75,8 +75,8 @@
 		296814612556A64B00146EDB /* VehicleList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VehicleList.storyboard; sourceTree = "<group>"; };
 		296814672556AC1000146EDB /* VehicleListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListBuilder.swift; sourceTree = "<group>"; };
 		296814692556B77900146EDB /* VehicleMapBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleMapBuilder.swift; sourceTree = "<group>"; };
-		2968146B2556BA3800146EDB /* VehicleTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTabBarController.swift; sourceTree = "<group>"; };
-		2968146D2556BF5C00146EDB /* VehicleTabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTabbarCoordinator.swift; sourceTree = "<group>"; };
+		2968146B2556BA3800146EDB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2968146D2556BF5C00146EDB /* VehicleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCoordinator.swift; sourceTree = "<group>"; };
 		296814732556C52E00146EDB /* ConsumerEdgeGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerEdgeGateway.swift; sourceTree = "<group>"; };
 		296814752556C5AE00146EDB /* NetworkService+Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Vehicles.swift"; sourceTree = "<group>"; };
 		296814772556C5E700146EDB /* VehicleResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleResource.swift; sourceTree = "<group>"; };
@@ -141,10 +141,10 @@
 		296814222555286D00146EDB /* RxMVVMC */ = {
 			isa = PBXGroup;
 			children = (
+				296814452556A1C300146EDB /* AppSetup */,
 				2968144A2556A2A300146EDB /* Scenes */,
 				296814492556A28D00146EDB /* Domain */,
 				296814482556A27C00146EDB /* Resources */,
-				296814452556A1C300146EDB /* AppSetup */,
 			);
 			path = RxMVVMC;
 			sourceTree = "<group>";
@@ -168,8 +168,8 @@
 				296814462556A1EC00146EDB /* AppCoordinator.swift */,
 				2968144E2556A39F00146EDB /* BaseCoordinaotr.swift */,
 				296814502556A3D200146EDB /* Coordinator.swift */,
-				2968146B2556BA3800146EDB /* VehicleTabBarController.swift */,
-				2968146D2556BF5C00146EDB /* VehicleTabbarCoordinator.swift */,
+				2968146B2556BA3800146EDB /* BaseViewController.swift */,
+				2968146D2556BF5C00146EDB /* VehicleCoordinator.swift */,
 			);
 			path = AppSetup;
 			sourceTree = "<group>";
@@ -428,11 +428,11 @@
 				296815DC25585EB100146EDB /* VehicleTableViewSection.swift in Sources */,
 				296814682556AC1000146EDB /* VehicleListBuilder.swift in Sources */,
 				296814262555286D00146EDB /* SceneDelegate.swift in Sources */,
-				2968146C2556BA3800146EDB /* VehicleTabBarController.swift in Sources */,
+				2968146C2556BA3800146EDB /* BaseViewController.swift in Sources */,
 				2968145E2556A61800146EDB /* VehicleMapViewController.swift in Sources */,
 				2968145C2556A5F100146EDB /* VehicleMapViewModel.swift in Sources */,
 				2968144F2556A39F00146EDB /* BaseCoordinaotr.swift in Sources */,
-				2968146E2556BF5C00146EDB /* VehicleTabbarCoordinator.swift in Sources */,
+				2968146E2556BF5C00146EDB /* VehicleCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

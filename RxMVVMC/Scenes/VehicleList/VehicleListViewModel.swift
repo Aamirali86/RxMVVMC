@@ -16,8 +16,9 @@ protocol VehicleListViewModelType {
     func fetchVehicles()
 }
 
-class VehicleListViewModel: VehicleListViewModelType {
+final class VehicleListViewModel: VehicleListViewModelType {
     //MARK:- Private
+    
     private let fetchVehicleAction: Action<(Coordinates, Coordinates), [Vehicle]>
     private let _vehicles = ReplaySubject<[Vehicle]>.create(bufferSize: 1)
     private let bag = DisposeBag()

@@ -9,7 +9,7 @@
 import UIKit
 import Network
 
-class VehicleListBuilder {
+final class VehicleListBuilder {
     func build() -> UIViewController {
         let storyboard = UIStoryboard(name: "VehicleList", bundle: Bundle.main)
         

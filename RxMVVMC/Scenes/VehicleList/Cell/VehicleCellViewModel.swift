@@ -14,7 +14,7 @@ protocol VehicleCellViewModelType {
     var heading: String { get }
 }
 
-class VehicleCellViewModel: VehicleCellViewModelType {
+final class VehicleCellViewModel: VehicleCellViewModelType {
     var state: VehicleState {
         return VehicleState(rawValue: vehicle.state) ?? .unknown
     }
@@ -27,11 +27,14 @@ class VehicleCellViewModel: VehicleCellViewModelType {
         return VehicleType(rawValue: vehicle.type) ?? .unknown
     }
     
+    //MARK:- Private
+    
     private let vehicle: Vehicle
+    
+    //MARK:- Init
     
     init(vehicle: Vehicle) {
         self.vehicle = vehicle
     }
-    
     
 }

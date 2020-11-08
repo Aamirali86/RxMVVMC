@@ -17,10 +17,14 @@ protocol VehicleMapViewModelType {
     func fetchVehicle(coordinates: EdgesCoordinates)
 }
 
-class VehicleMapViewModel: VehicleMapViewModelType {
+final class VehicleMapViewModel: VehicleMapViewModelType {
+    //MARK:- Private
+    
     private let fetchVehicleAction: Action<(Coordinates, Coordinates), [Vehicle]>
     private let _vehicles = ReplaySubject<[Vehicle]>.create(bufferSize: 1)
     private let bag = DisposeBag()
+    
+    //MARK:- Init
     
     init(vehicleService: VehicleAPI) {
         fetchVehicleAction = Action { (point1, point2) in
