@@ -35,8 +35,8 @@ class VehicleMapViewModel: VehicleMapViewModelType {
     
     func fetchVehicle(coordinates: EdgesCoordinates) {
         fetchVehicleAction.execute(
-            (Coordinates(latitude: coordinates.southWest.latitude, longitude: coordinates.southWest.longitude)
-                , Coordinates(latitude: coordinates.northEast.latitude, longitude: coordinates.northEast.longitude))
+            (Coordinates(latitude: coordinates.southWest.latitude, longitude: coordinates.southWest.longitude),
+             Coordinates(latitude: coordinates.northEast.latitude, longitude: coordinates.northEast.longitude))
         )
     }
     
